@@ -1,6 +1,6 @@
-import random
 from tkinter import *
 from tkinter import messagebox
+import secrets
 
 # Defining the display window
 root = Tk()
@@ -16,7 +16,7 @@ answer_dict = {}
 
 # Creating and shuffling the cards
 cards = [1, 2, 3, 4, 5, 6] * 2
-random.shuffle(cards)
+secrets.SystemRandom().shuffle(cards)
 
 # Creating Frame for button
 frame = Frame(root)
@@ -75,7 +75,7 @@ def reset():
     global cards, winner
     winner = 0
     cards = [1, 2, 3, 4, 5, 6] * 2
-    random.shuffle(cards)
+    secrets.SystemRandom().shuffle(cards)
     
     # Reset Label
     my_label.config(text="")
