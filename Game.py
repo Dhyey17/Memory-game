@@ -6,9 +6,6 @@ import secrets
 root = Tk()
 root.title("Meomory Game")
 root.geometry("500x500")
-
-# Some variables
-global winner, cards
 winner = 0
 count = 0
 answer_list = []
